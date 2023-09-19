@@ -30,7 +30,7 @@ function validarFormulario(e) {
         } else if (precioMinimo < 0 ) {
             Swal.fire({title: 'Error', text: 'Mira que si pones negativo vas a estar haciendo caridad', icon: 'error', confirmButtonText: 'Ok'});
         } else if (edadMinima < 0 ) {
-            Swal.fire({title: 'Error', text: 'Si con menores estas en un quilombo, no me quiero imaginar con fetos', icon: 'error', confirmButtonText: 'Ok'});
+            Swal.fire({title: 'Error', text: 'Si con menores estas en un quilombo', icon: 'error', confirmButtonText: 'Ok'});
         } else if (edadMinima > 100 ) {
             Swal.fire({title: 'Error', text: 'Es un funeral acaso?', icon: 'error', confirmButtonText: 'Ok'});
         } else {
@@ -44,3 +44,11 @@ function validarFormulario(e) {
         }
     }
 }
+
+const diaDeHoy = new Date()
+const body = document.body
+const footer = document.createElement('footer')
+footer.innerHTML = `<footer>
+        <h3>All rights are reserved to DISCO ltd © ${diaDeHoy.getFullYear()}</h3>
+    </footer>`
+body.append(footer)

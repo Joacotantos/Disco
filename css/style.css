@@ -37,6 +37,20 @@ margin-right: 50px;
     right: 5px;
     width: 80px; 
 }
+.dolarizar{
+width: 90px;
+height: 100px;
+}
+.pesificar{
+    width: 90px;
+height: 100px;
+}
+.fotos{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    background-color: #d4d7e7;
+}
 footer{
     background-color: rgb(125, 141, 172);
     font-size: 12px;

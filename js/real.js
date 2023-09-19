@@ -50,3 +50,11 @@ function toggleMode() {
     let element2 = document.getElementsByTagName('header')[0];
     element2.classList.toggle("dark");
 }
+
+const diaDeHoy = new Date()
+const body = document.body
+const footer = document.createElement('footer')
+footer.innerHTML = `<footer>
+        <h3>All rights are reserved to DISCO ltd © ${diaDeHoy.getFullYear()}</h3>
+    </footer>`
+body.append(footer)

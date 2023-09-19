@@ -17,18 +17,21 @@
         <div id="append" class="container botones"></div>
         <form id="formulario" class="container botones">
           <label for="">Usuario</label>
-          <input type="text" />
+          <input type="text" name="name" />
           <label for="">Contraseña</label>
-          <input type="text" />
-          <input type="submit" value="Enviar" class="btn btn-primary">
+          <input type="text" name="password" />
+          <input type="submit" value="Enviar" class="btn btn-primary" id="button">
         </form>
 
         </main>
 
-    <footer>
-        <h3>All rights are reserved to DISCO ltd</h3>
-    </footer>
     <script src="../js/real3.js"></script> 
+    <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  emailjs.init('2955ytVuEL-xgE5oD')
+</script>
 </body>
 
 </html>

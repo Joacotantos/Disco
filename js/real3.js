@@ -1,10 +1,24 @@
 const myFormulario = document.getElementById('formulario');
 const appendFromForm = document.getElementById('append')
+const btn = document.getElementById('button');
 
 myFormulario.addEventListener('submit', validarFormulario);
 
 function validarFormulario(e) {
     e.preventDefault();
+    btn.value = 'Sending...';
+
+    const serviceID = 'service_t7nk8cn';
+    const templateID = 'template_pp4zacy';
+
+    emailjs.sendForm(serviceID, templateID, this)
+     .then(() => {
+       btn.value = 'Send Email';
+       alert('Sent!');
+     }, (err) => {
+       btn.value = 'Send Email';
+       alert(JSON.stringify(err));
+     });
 
     let form = e.target;
     let inputA = form.children[1].value; 
@@ -26,3 +40,11 @@ function validarFormulario(e) {
         window.location.href = "../index.html"
     }
 }
+
+const diaDeHoy = new Date()
+const body = document.body
+const footer = document.createElement('footer')
+footer.innerHTML = `<footer>
+        <h3>All rights are reserved to DISCO ltd © ${diaDeHoy.getFullYear()}</h3>
+    </footer>`
+body.append(footer)
